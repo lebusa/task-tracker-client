@@ -37,7 +37,7 @@ code {
 
 .btn {
   display: inline-block;
-  background-color: #000;
+  background-color: rgb(48, 48, 48);
   color: #fff;
   border: none;
   padding: 10px 20px;
