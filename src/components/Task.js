@@ -1,8 +1,8 @@
 import  { FaTrashAlt } from 'react-icons/fa';
 
-const Task = ({task, onDelete}) => {
+const Task = ({task, onDelete, toggleReminder}) => {
     return (
-        <div className="task">
+        <div className="task" onDoubleClick={() => toggleReminder(task.id)}>
             <h3>
                 {task.title}
                 <FaTrashAlt className="task-remove" onClick={ () => onDelete(task.id)} />
