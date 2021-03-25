@@ -5,6 +5,7 @@ import Tasks from "./components/Tasks";
 import Footer from "./components/Footer";
 
 function App() {
+  const [showAddTaskForm, setShowAddTaskForm] = useState(false);
   const [tasks, setTasks] = useState([
     {
       title: "'na ke tla pele",
@@ -52,12 +53,12 @@ function App() {
 
   // toggle task add form
   const toggledAddTask = () => {
-    console.log(`must either show or hide add task form`);
+    setShowAddTaskForm(!showAddTaskForm);
   }
 
   // add task, given its object
   const addTask = (task) => {
-    const id = (new Date).getTime();
+    const id = (new Date()).getTime();
     const newTask = {...task, id};
     setTasks([...tasks, newTask]);
   };
@@ -74,8 +75,8 @@ function App() {
 
   return (
     <div className="container">
-      <Header addTask={toggledAddTask} />
-      <AddTask onAdd={addTask}/>
+      <Header addTask={toggledAddTask} showAddTask={showAddTaskForm} />
+      {showAddTaskForm && <AddTask onAdd={addTask}/>}
       {tasks.length ? (
         <Tasks
           tasks={tasks}
