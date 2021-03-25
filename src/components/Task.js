@@ -1,12 +1,12 @@
-import  { FaTimes } from 'react-icons/fa';
+import  { FaTrashAlt } from 'react-icons/fa';
 
 const Task = ({task}) => {
     return (
         <div className="task">
             <h3>
                 {task.title}
-                <FaTimes />
-                </h3>
+                <FaTrashAlt className="task-remove"/>
+            </h3>
             <p>{task.scheduledFor}</p>
         </div>
     )

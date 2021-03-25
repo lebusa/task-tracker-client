@@ -84,6 +84,11 @@ code {
   justify-content: space-between;
 }
 
+.task-remove {
+  color: red;
+  border: 0px solid navy;
+}
+
 .add-form {
   margin-bottom: 40px;
 }

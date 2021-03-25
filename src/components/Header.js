@@ -9,7 +9,8 @@ const Header = ({title, date}) => {
     return (
         <header className="header">
             <h1>{title}</h1>
-            <Button /* name='Add' bgClr='green'  */onClick={someFunc} />
+            <Button name='Add' bgClr='green' onClick={someFunc} />
+            
         </header>
     )
 }
