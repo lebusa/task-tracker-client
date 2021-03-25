@@ -1,10 +1,12 @@
-import { useState } from 'react';
+import Task from './Task';
 
 const Tasks = ({tasks}) => {
     
     return (
         <>
-          {tasks.map((task,i) => <p key={i}>{task.title}</p>)}  
+          {tasks.map((task,i) => 
+          <Task key={i} task={task} />
+          )}  
         </>
     )
 }
