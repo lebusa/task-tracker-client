@@ -20,7 +20,7 @@ function App() {
         let newTask =   {...t, id:t._id}
         delete newTask['_id'];
         return newTask;
-      } ));
+      }));
     }
     getTasks();
   }, []);
