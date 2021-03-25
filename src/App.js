@@ -16,7 +16,11 @@ function App() {
   useEffect(() => {
     const getTasks = async () => {
       const tasksFromApi = await fetchTasks();
-      setTasks(tasksFromApi.map( t => { return { ...t, id:t._id } } ));
+      setTasks(tasksFromApi.map( t => { 
+        let newTask =   {...t, id:t._id}
+        delete newTask['_id'];
+        return newTask;
+      } ));
     }
     getTasks();
   }, []);
