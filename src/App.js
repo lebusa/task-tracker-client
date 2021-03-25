@@ -1,7 +1,8 @@
+import { useState } from "react";
 import Header from "./components/Header";
+import AddTask from "./components/AddTask";
 import Tasks from "./components/Tasks";
 import Footer from "./components/Footer";
-import { useState } from "react";
 
 function App() {
   const [tasks, setTasks] = useState([
@@ -16,6 +17,18 @@ function App() {
       scheduledFor: "2021-03-20T12:45:44.874Z",
       reminder: true,
       id: 1616687637694,
+    },
+    {
+      title: "palama koloi re ee skolong",
+      scheduledFor: "2021-03-28T08:00:00.000Z",
+      reminder: true,
+      id: 1616687637694,
+    },
+    {
+      title: "u ntlele le ntho tse monate",
+      scheduledFor: "2021-03-29T03:30:00.365Z",
+      reminder: true,
+      id: 1616687637674,
     },
     {
       title: "kea sekolong, ke palama schoobase",
@@ -44,13 +57,13 @@ function App() {
 
   // toggle task, given its id
   const toggleReminder = (taskId) => {
-    //console.log(`toggle reminder...${taskId}`);
     setTasks(tasks.map((task) => task.id === taskId ? {...task, reminder: ! task.reminder} :  task));
   };
 
   return (
     <div className="container">
       <Header />
+      <AddTask />
       {tasks.length ? (
         <Tasks
           tasks={tasks}
