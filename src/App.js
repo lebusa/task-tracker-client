@@ -14,23 +14,18 @@ function App() {
 
   // fetch tasks from a tasks server api
   useEffect(() => {
-    const fetchTasks = async () => {
-      
-      const options = {
-        mode: 'cors',
-      }
-
-      const res = await fetch(API_URL, options);
-      console.log(res)
-      const data = await res.json();
-      console.log(data)
+    const getTasks = async () => {
+      const tasksFromApi = await fetchTasks();
+      setTasks(tasksFromApi);
     }
-    fetchTasks()
-    .catch(err => {
-      console.log('Liphoso', err);
-      return;
-    });
+    getTasks();
   }, []);
+
+const fetchTasks = async () => {
+      const res = await fetch(API_URL);
+      console.log('onto something..')
+      return await res.json();
+    }
 
   // toggle task add form
   const toggledAddTask = () => {
