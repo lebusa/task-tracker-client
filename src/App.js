@@ -50,12 +50,16 @@ function App() {
     },
   ]);
 
+  // toggle task add form
+  const toggledAddTask = () => {
+    console.log(`must either show or hide add task form`);
+  }
+
   // add task, given its object
   const addTask = (task) => {
     const id = (new Date).getTime();
     const newTask = {...task, id};
     setTasks([...tasks, newTask]);
-    
   };
 
   // delete task, given its id
@@ -70,7 +74,7 @@ function App() {
 
   return (
     <div className="container">
-      <Header addTask={addTask} />
+      <Header addTask={toggledAddTask} />
       <AddTask onAdd={addTask}/>
       {tasks.length ? (
         <Tasks
