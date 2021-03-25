@@ -1,10 +1,4 @@
-import PropTypes from 'prop-types';
-
 const Button = ({bgClr, name, onClick}) => {
-    /* const onClick = (e) => {
-        console.log(`clicked ${Date.now()}`)
-    } */
-
     return <button 
       onClick={onClick} 
       className="btn" 
