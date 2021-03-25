@@ -22,7 +22,7 @@ function App() {
       title: "palama koloi re ee skolong",
       scheduledFor: "2021-03-28T08:00:00.000Z",
       reminder: true,
-      id: 1616687637694,
+      id: 1616687637594,
     },
     {
       title: "u ntlele le ntho tse monate",
@@ -33,7 +33,7 @@ function App() {
     {
       title: "kea sekolong, ke palama schoobase",
       scheduledFor: "2021-03-26T07:45:44.874Z",
-      reminder: true,
+      reminder: false,
       id: 1616687637697,
     },
     {
@@ -50,6 +50,14 @@ function App() {
     },
   ]);
 
+  // add task, given its object
+  const addTask = (task) => {
+    const id = (new Date).getTime();
+    const newTask = {...task, id};
+    setTasks([...tasks, newTask]);
+    
+  };
+
   // delete task, given its id
   const deleteTask = (taskId) => {
     setTasks(tasks.filter((task) => task.id !== taskId));
@@ -62,8 +70,8 @@ function App() {
 
   return (
     <div className="container">
-      <Header />
-      <AddTask />
+      <Header addTask={addTask} />
+      <AddTask onAdd={addTask}/>
       {tasks.length ? (
         <Tasks
           tasks={tasks}

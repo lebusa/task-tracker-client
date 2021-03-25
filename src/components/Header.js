@@ -2,14 +2,11 @@ import PropTypes from "prop-types";
 import React from "react";
 import Button from "./Button";
 
-const Header = ({ title, date }) => {
-  const someFunc = () => {
-    console.log(`logging ${Date.now()}`);
-  };
+const Header = ({ title, date, addTask }) => {
   return (
     <header className="header">
       <h1>{title}</h1>
-      <Button name="Add" bgClr="green" onClick={someFunc} />
+      <Button name="Add" bgClr="green" onClick={addTask} />
     </header>
   );
 };
