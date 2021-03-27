@@ -66,12 +66,13 @@ function App() {
   return (
     <Router>
       <div className="container">
+      <Header addTask={toggledAddTask} showAddTask={showAddTaskForm} />
         <Route
           path="/"
           exact
           render={(props) => (
             <>
-              <Header addTask={toggledAddTask} showAddTask={showAddTaskForm} />
+              
               {showAddTaskForm && <AddTask onAdd={addTask} />}
               {tasks.length ? (
                 <Tasks
