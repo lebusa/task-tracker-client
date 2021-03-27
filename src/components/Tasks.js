@@ -1,7 +1,13 @@
+import { useState, useEffect } from "react";
 import Task from './Task';
 
 const Tasks = ({tasks, onDelete, toggleReminder}) => {
-    
+  
+  useEffect(() => {
+    // set doc title
+    document.title = "Tasks | Tasks Tracker";
+  }, []);
+
     return (
         <>
           {tasks.map((task,i) => 

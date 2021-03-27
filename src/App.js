@@ -85,7 +85,7 @@ function App() {
             </>
           )}
         />
-        <Route path="/about" component={About} />
+        <Route path="/about" component={About} title="About | Tasks Tracker" />
         <Footer />
       </div>
     </Router>

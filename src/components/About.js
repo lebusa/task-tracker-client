@@ -1,14 +1,22 @@
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
+import { useEffect } from "react";
+
 const About = () => {
-    return (
-        <div>
-            <h3>App: Task Tracker</h3>
-            <h5>Version: 1.0.0</h5>
-            <h6>Developer: M. Lebusa</h6>
+  useEffect(() => {
+    document.title = "About | Tasks Tracker";
+  });
 
-            <Link to="/" className="link">Tasks</Link>
-        </div>
-    )
-}
+  return (
+    <div>
+      <h3>App: Task Tracker</h3>
+      <h5>Version: 1.0.0</h5>
+      <h6>Developer: M. Lebusa</h6>
 
-export default About
+      <Link to="/" className="link">
+        Tasks
+      </Link>
+    </div>
+  );
+};
+
+export default About;
