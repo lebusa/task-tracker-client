@@ -6,9 +6,9 @@ import Button from "./Button";
 const Header = ({ title, addTask, showAddTask }) => {
   const location = useLocation();
   return (
-    <header className="header">
+    <header className="header" style={{}}>
       <h1>{title}</h1>
-      {location.pathname === "/" && <Button name={showAddTask ? "Close": "Add"} bgClr={showAddTask ? "red" : "green"}onClick={addTask} />}
+      {location.pathname === "/" && <Button name={showAddTask ? "Close": "Add"} bgClr={showAddTask ? "red" : ""}onClick={addTask} />}
     </header>
   );
 };
