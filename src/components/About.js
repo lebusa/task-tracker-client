@@ -7,7 +7,7 @@ const About = () => {
   });
 
   return (
-    <div>
+    <div style={{"lineHeight":"1em"}}>
       <h5>Version: 1.0.0</h5>
       
       <h6>Developer: Motebang Lebusa</h6>

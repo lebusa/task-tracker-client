@@ -35,18 +35,19 @@ code {
   margin-bottom: 20px;
   border-radius: 3px;
   background-color:  rgba(3, 105, 131, 0.774);
-  padding: 3px;
+  padding: 0 8px;
 }
 
 
 .btn {
   display: inline-block;
   background-color: rgb(183, 195, 199);
-  color: #fff;
+  color: rgb(20, 11, 11);
   border: none;
-  padding: 10px 20px;
-  margin: 5px;
-  border-radius: 5px;
+  padding: 3px 20px;
+  margin: 5px 0;
+  width: 5em;
+  border-radius: 3px;
   cursor: pointer;
   text-decoration: none;
   font-size: 15px;
