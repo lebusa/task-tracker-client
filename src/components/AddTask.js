@@ -12,11 +12,11 @@ const AddTask = ({ onAdd }) => {
         alert(`Please add a title for the task`);
         return;
     }
-    onAdd( { title, date, reminder } );
+    onAdd( { title, scheduledFor:date, reminder } );
 
     setTitle('');
     setDate('');
-    setReminder(0);
+    setReminder(false);
 
   }
 
