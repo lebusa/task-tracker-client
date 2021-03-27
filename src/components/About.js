@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 const About = () => {
     return (
         <div>
@@ -5,7 +6,7 @@ const About = () => {
             <h5>Task Tracker</h5>
             <h6>Developer: M. Lebusa</h6>
 
-            <a href="/">Back</a>
+            <Link to="/">Back</Link>
         </div>
     )
 }
