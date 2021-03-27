@@ -39,12 +39,13 @@ const fetchTasks = async () => (await axios.get(API_URL)).data;
   };
 
   // delete task, given its id
-  const deleteTask = (taskId) => {
+  const deleteTask = async (taskId) => {
+    await axios.delete(`${API_URL}/${taskId}`);
     setTasks(tasks.filter((task) => task.id !== taskId));
   };
 
   // toggle task, given its id
-  const toggleReminder = (taskId) => {
+  const toggleReminder = async (taskId) => {
     setTasks(tasks.map((task) => task.id === taskId ? {...task, reminder: ! task.reminder} :  task));
   };
 
