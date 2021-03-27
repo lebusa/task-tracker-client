@@ -12,6 +12,7 @@ const Footer = (props) => {
           to="https://www.youtube.com/watch?v=w7ejDZ8SWv8"
           rel="noreferrer"
           target="_blank"
+          className="link"
         >
           Traversy Media
         </Link>
@@ -19,7 +20,7 @@ const Footer = (props) => {
 
       <div>Copyright &copy; 2021. Lebusa, M.</div>
       <div>
-        <Link to="/about">About</Link>
+        <Link to="/about" className="link"> About</Link>
       </div>
     </footer>
   );
