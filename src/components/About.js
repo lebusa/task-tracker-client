@@ -7,12 +7,12 @@ const About = () => {
   });
 
   return (
-    <div style={{"lineHeight":"1em"}}>
+    <div className="container about">
       <h5>Version: 1.0.0</h5>
       
       <h6>Developer: Motebang Lebusa</h6>
       
-      <Link to="/" className="link">
+      <Link to="/" className="link tasks-link ">
         Tasks
       </Link>
       
