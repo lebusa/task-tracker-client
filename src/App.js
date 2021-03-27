@@ -46,7 +46,10 @@ const fetchTasks = async () => (await axios.get(API_URL)).data;
 
   // toggle task, given its id
   const toggleReminder = async (taskId) => {
-    setTasks(tasks.map((task) => task.id === taskId ? {...task, reminder: ! task.reminder} :  task));
+    let taskToUpdate = tasks.filter( task => task.id === taskId)[0];
+    taskToUpdate.reminder = !taskToUpdate.reminder;
+    await axios.put(`${API_URL}/${taskId}`, {reminder: taskToUpdate.reminder});
+    setTasks(tasks.map((task) => task.id === taskId ? {...task, reminder: taskToUpdate.reminder } :  task));
   };
 
   return (
