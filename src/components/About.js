@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
 
-const About = () => {
+const About = ({numberOfTasks}) => {
   useEffect(() => {
     document.title = "About | Tasks Tracker";
   });
@@ -13,7 +13,7 @@ const About = () => {
       <h6>Developer: Motebang Lebusa</h6>
       
       <Link to="/" className="link tasks-link ">
-        Tasks
+        Tasks {numberOfTasks}
       </Link>
       
 

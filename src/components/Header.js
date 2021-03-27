@@ -8,7 +8,7 @@ const Header = ({ title, addTask, showAddTask }) => {
   return (
     <header className="header" style={{}}>
       <h1>{title}</h1>
-      {location.pathname === "/" && <Button name={showAddTask ? "Close": "Add"} bgClr={showAddTask ? "red" : ""}onClick={addTask} />}
+      {location.pathname === "/" && <Button name={showAddTask ? "Close": "Add"} bgClr={showAddTask ? "rgb(236, 22, 22)" : ""}onClick={addTask} />}
     </header>
   );
 };
@@ -24,3 +24,6 @@ Header.propTypes = {
 };
 
 export default Header;
+
+
+// rgb(236, 22, 22);

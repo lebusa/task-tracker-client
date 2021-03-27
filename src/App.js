@@ -72,7 +72,6 @@ function App() {
           exact
           render={(props) => (
             <>
-              
               {showAddTaskForm && <AddTask onAdd={addTask} />}
               {tasks.length ? (
                 <Tasks
@@ -86,7 +85,7 @@ function App() {
             </>
           )}
         />
-        <Route path="/about" component={About} title="About | Tasks Tracker" />
+        <Route path="/about" component={About} title="About | Tasks Tracker" numberOfTasks={tasks.length}/>
         <Footer />
       </div>
     </Router>
