@@ -3,7 +3,7 @@ import Header from "./components/Header";
 import AddTask from "./components/AddTask";
 import Tasks from "./components/Tasks";
 import Footer from "./components/Footer";
-// import axios from 'axios';
+import axios from 'axios';
 
 const API_URL = new URL("http://localhost:4000/api/tasks");
 
@@ -25,11 +25,7 @@ function App() {
     getTasks();
   }, []);
 
-const fetchTasks = async () => {
-      const res = await fetch(API_URL);
-      console.log('onto something..')
-      return await res.json();
-    }
+const fetchTasks = async () => (await axios.get(API_URL)).data;
 
   // toggle task add form
   const toggledAddTask = () => {
@@ -37,9 +33,8 @@ const fetchTasks = async () => {
   }
 
   // add task, given its object
-  const addTask = (task) => {
-    const id = (new Date()).getTime();
-    const newTask = {...task, id};
+  const addTask = async (task) => {
+    const newTask = (await axios.post(API_URL, task)).data;
     setTasks([...tasks, newTask]);
   };
 
