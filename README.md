@@ -2,11 +2,13 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-# NB: This repo uses a MongoDB API.
+# This repo uses a MongoDB API.
 
-You will need to have a MongoDB API (or a backend of your choice) running in order to see this project in action. A corresponding API is available on the repos list (here). 
+You will need to have a MongoDB API (or a backend of your choice) running in order to see this project in action. A corresponding API is available on the repos list ([https://github.com/lebusa/tasks-tracker-api](here)). 
 
-Ensure that the backend is first running, before running the React App.
+The React App makes requets to the `/tasks` endpoint.
+
+Ensure that the backend is running before starting the React App.
 
 ## Available Scripts
 Clone the repo.
@@ -28,11 +30,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ### `npm run build`
 
