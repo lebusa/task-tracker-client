@@ -46,10 +46,13 @@ code {
 
 .about {
   border: none;
+  line-height: 2.5em;
 }
 
-.test {
-  color: rgb(148, 95, 95);
+.go-back {
+  padding: 1.2em 0em;
+  font-size: 1.5em;
+  text-decoration: none;
 }
 
 .btn {
