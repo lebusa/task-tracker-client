@@ -1,7 +1,7 @@
 import { FaTrashAlt } from "react-icons/fa";
 
 const Task = ({ task, onDelete, toggleReminder }) => {
-  const time = new Date(task.scheduledFor);//.toLocaleDateString();
+  const time = new Date(task.scheduledFor);
   const dt = time.toLocaleDateString();
   const tm = time.toLocaleTimeString();
   return (
