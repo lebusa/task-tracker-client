@@ -3,11 +3,9 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
-Clone the repo:
+Clone the repo.
 
-### `npm start`
-
-Gon itn the project directory:
+Go into the project directory:
 
 ### cd `path/to/directory`
 
