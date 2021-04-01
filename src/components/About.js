@@ -7,14 +7,18 @@ const About = ({numberOfTasks}) => {
   });
 
   return (
-    <div className="container about">
+    <div className="container about ">
+      <p className="" >This Task Tracker app was created for learning purposes. </p>
       <h4>Version: 1.0.0</h4>
       
       <h4>Developer: Motebang Lebusa</h4>
       
-      Go to <Link to="/" className="">
-        Tasks {numberOfTasks}
-      </Link>
+      <p className="go-back">
+        Go to <Link to="/" className="about">
+          Tasks {numberOfTasks}
+        </Link>
+      </p>
+      
       
 
       <p>Credits:{" "}
