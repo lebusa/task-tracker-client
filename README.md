@@ -2,6 +2,12 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+# NB: This repo uses a MongoDB API.
+
+You will need to have a MongoDB API running in order to see this project in action. A corresponding API is available on the repos list (here).
+
+Ensure that the backend is first running, before running the React App.
+
 ## Available Scripts
 Clone the repo.
 
