@@ -22,14 +22,13 @@ function App() {
     const getTasks = async () => {
       const tasksFromApi = await fetchTasks();
       setTasks(
-        // change _id to id for mongodb objects
+        // take care of mongodb/mongoose doc props _id
         tasksFromApi.map((t) => {
-          let newTask = t;
-          if(t.hasOwnProperty('_id')) {
-            newTask['id'] = newTask._id;
-            delete newTask["_id"];
+          if(t.hasOwnProperty("_id")) {
+            t["id"] = t._id;
+            delete t["_id"];
           }
-          return newTask;
+          return t;
         })
       );
     };
