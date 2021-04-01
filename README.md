@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 # This repo uses a MongoDB API.
 
-You will need to have a MongoDB API (or a backend of your choice) running in order to see this project in action. A corresponding API is available on the repos list ([https://github.com/lebusa/tasks-tracker-api](here)). 
+You will need to have a MongoDB API (or a backend of your choice) running in order to see this project in action. A corresponding API is available on the repos list ([here](https://github.com/lebusa/tasks-tracker-api)). 
 
 The React App makes requets to the `/tasks` endpoint.
 
