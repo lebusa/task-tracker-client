@@ -7,7 +7,11 @@ import Footer from "./components/Footer";
 import About from "./components/About";
 import axios from "axios";
 
-const API_URL = new URL("http://localhost:4000/api/tasks");
+// substitute these with your environment values
+const BACKEND_HOST = "localhost";
+const BACKEND_PORT = "4000"; 
+
+const API_URL = new URL(`http://${BACKEND_HOST}:${BACKEND_PORT}/api/tasks`);
 
 function App() {
   const [showAddTaskForm, setShowAddTaskForm] = useState(false);

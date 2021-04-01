@@ -8,18 +8,18 @@ const About = ({numberOfTasks}) => {
 
   return (
     <div className="container about">
-      <h5>Version: 1.0.0</h5>
+      <h4>Version: 1.0.0</h4>
       
-      <h6>Developer: Motebang Lebusa</h6>
+      <h4>Developer: Motebang Lebusa</h4>
       
-      <Link to="/" className="link tasks-link ">
+      Go to <Link to="/" className="">
         Tasks {numberOfTasks}
       </Link>
       
 
       <p>Credits:{" "}
         <Link
-          to="https://www.youtube.com/watch?v=w7ejDZ8SWv8"
+          to={{pathname: "https://www.youtube.com/watch?v=w7ejDZ8SWv8"}}
           rel="noreferrer"
           target="_blank"
           className="link"
