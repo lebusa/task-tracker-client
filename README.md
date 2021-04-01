@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 # NB: This repo uses a MongoDB API.
 
-You will need to have a MongoDB API running in order to see this project in action. A corresponding API is available on the repos list (here).
+You will need to have a MongoDB API (or a backend of your choice) running in order to see this project in action. A corresponding API is available on the repos list (here). 
 
 Ensure that the backend is first running, before running the React App.
 
