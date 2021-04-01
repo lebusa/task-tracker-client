@@ -1,10 +1,21 @@
-# Getting Started with Create React App
+# Getting Started with the Tasks Tracker React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
+Clone the repo:
 
-In the project directory, you can run:
+### `npm start`
+
+Gon itn the project directory:
+
+### cd `path/to/directory`
+
+Install the required packages:
+
+### `npm install`
+
+Once completed, you can run:
 
 ### `npm start`
 
