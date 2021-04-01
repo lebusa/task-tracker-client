@@ -14,10 +14,10 @@ const AddTask = ({ onAdd }) => {
     }
     onAdd( { title, scheduledFor:date, reminder } );
 
+    // clear the fields
     setTitle('');
     setDate('');
     setReminder(false);
-
   }
 
   return (

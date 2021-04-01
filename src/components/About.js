@@ -1,29 +1,31 @@
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
 
-const About = ({numberOfTasks}) => {
+const About = () => {
   useEffect(() => {
     document.title = "About | Tasks Tracker";
   });
 
   return (
     <div className="container about ">
-      <p className="" >This Task Tracker app was created for learning purposes. </p>
+      <p className="">
+        This Task Tracker app was created for demon & learning purposes.{" "}
+      </p>
       <h4>Version: 1.0.0</h4>
-      
-      <h4>Developer: Motebang Lebusa</h4>
-      
+
+      <h4>Developer: M. Lebusa</h4>
+
       <p className="go-back">
-        Go to <Link to="/" className="about">
-          Tasks {numberOfTasks}
+        Go to{" "}
+        <Link to="/" className="about">
+          Tasks
         </Link>
       </p>
-      
-      
 
-      <p>Credits:{" "}
+      <p>
+        Credits:{" "}
         <Link
-          to={{pathname: "https://www.youtube.com/watch?v=w7ejDZ8SWv8"}}
+          to={{ pathname: "https://www.youtube.com/watch?v=w7ejDZ8SWv8" }}
           rel="noreferrer"
           target="_blank"
           className="link"
@@ -31,8 +33,6 @@ const About = ({numberOfTasks}) => {
           Traversy Media React Crash Course 2021
         </Link>
       </p>
-
-     
     </div>
   );
 };

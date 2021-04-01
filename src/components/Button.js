@@ -10,7 +10,7 @@ const Button = ({bgClr, name, onClick}) => {
 
 Button.defaultProps = {
     backgroundColor: "rgba(3, 105, 131, 0.774)",
-    name: "Button",
+    name: "Add",
 }
 
 export default Button

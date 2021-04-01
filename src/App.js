@@ -1,17 +1,17 @@
 import { useState, useEffect } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
+import axios from "axios";
 import Header from "./components/Header";
 import AddTask from "./components/AddTask";
 import Tasks from "./components/Tasks";
 import Footer from "./components/Footer";
 import About from "./components/About";
-import axios from "axios";
 
 // substitute these with your environment values
-const BACKEND_HOST = "http://192.168.0.100";
-const BACKEND_PORT = "3001"; 
+const BACKEND_URL = "http://192.168.0.100";
+const BACKEND_PORT = "3002";
 
-const API_URL = new URL(`${BACKEND_HOST}:${BACKEND_PORT}/api/tasks`);
+const API_URL = new URL(`${BACKEND_URL}:${BACKEND_PORT}/api/tasks`);
 
 function App() {
   const [showAddTaskForm, setShowAddTaskForm] = useState(false);
@@ -22,9 +22,13 @@ function App() {
     const getTasks = async () => {
       const tasksFromApi = await fetchTasks();
       setTasks(
+        // change _id to id for mongodb objects
         tasksFromApi.map((t) => {
-          let newTask = { ...t, id: t._id };
-          delete newTask["_id"];
+          let newTask = t;
+          if(t.hasOwnProperty('_id')) {
+            newTask['id'] = newTask._id;
+            delete newTask["_id"];
+          }
           return newTask;
         })
       );
@@ -89,7 +93,7 @@ function App() {
             </>
           )}
         />
-        <Route path="/about" component={About} title="About | Tasks Tracker" numberOfTasks={tasks.length}/>
+        <Route path="/about" component={About} title="About | Tasks Tracker"/>
         <Footer />
       </div>
     </Router>

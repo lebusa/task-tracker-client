@@ -3,8 +3,7 @@ import Task from "./Task";
 
 const Tasks = ({ tasks, onDelete, toggleReminder }) => {
   useEffect(() => {
-    // set doc title
-    document.title = "Tasks | Tasks Tracker";
+    document.title = "Tasks | Tasks Tracker"; // set doc title
   }, []);
 
   return (
