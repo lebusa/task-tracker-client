@@ -2,13 +2,11 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-# This repo persists data (user tasks) locally.
+# This repo a local data persistent storage.
 
-You will need to have a MongoDB service running API (or a backend of your choice, with changes to the database settings) running in order to see this project in action. A corresponding `Tasks Tracker API` is available on the repos list ([here](https://github.com/lebusa/task-tracker-api/tree/master)). 
+You will need to have a running backend in order to see this project in action. The corresponding backend`Tasks Tracker API` is available in the repos ([here](https://github.com/lebusa/task-tracker-api/tree/master)), with more details. 
                          
 The React App makes requets to the `/tasks` endpoint.
-
-Ensure that the backend is running prior to starting the Tasks Tracker App.
 
 ## Available Scripts
 Clone the repo.
